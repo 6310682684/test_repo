@@ -1,0 +1,24 @@
+---
+name: R10k Deployment
+
+on:
+  push:
+    paths:
+      - 'Puppetfile'
+      - 'modules/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install r10k
+        run: gem install r10k
+
+      - name: Deploy changes with r10k
+        run: |
+          r10k puppetfile install
+          r10k deploy environment -pv
