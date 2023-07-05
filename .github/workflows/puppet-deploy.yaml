@@ -6,7 +6,7 @@ on:
     paths:
       - 'Puppetfile'
       - 'modules/**'
-
+      - 'code/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
