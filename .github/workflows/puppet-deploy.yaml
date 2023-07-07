@@ -20,5 +20,4 @@ jobs:
 
       - name: Deploy changes with r10k
         run: |
-          sudo r10k puppetfile install --puppetfile /etc/puppetlabs/code/environments/git/main/Puppetfile
-          sudo r10k deploy environment -pv
+          sudo r10k deploy environment -p
