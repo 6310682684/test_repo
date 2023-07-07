@@ -23,4 +23,5 @@ jobs:
         run: |
           #sudo /usr/local/bin/r10k deploy evironment -pv
           #sudo /usr/bin/bash -c "cd /etc/puppetlabs/code/environments/git/main && sudo /usr/local/bin/r10k deploy environment -pv"
-          sudo /usr/bin/bash -c "cd /etc/puppetlabs/"
+          cd /etc/puppetlabs/code/environments/git/main
+          sudo /usr/local/bin/r10k deploy environment -pv
