@@ -20,5 +20,5 @@ jobs:
 
       - name: Deploy changes with r10k
         run: |
-          sudo r10k puppetfile install
+          sudo r10k puppetfile install --puppetfile /path/to/Puppetfile
           sudo r10k deploy environment -pv
