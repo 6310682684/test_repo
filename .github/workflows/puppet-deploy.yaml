@@ -19,5 +19,6 @@ jobs:
         run: sudo gem install r10k
 
       - name: Deploy changes with r10k
+        working-directory: /etc/puppetlabs/code/environments/git/main
         run: |
           sudo r10k deploy environment -p
