@@ -21,4 +21,4 @@ jobs:
       - name: Deploy changes with r10k
         #working-directory: /etc/puppetlabs/code/environments/git/main
         run: |
-          sudo /usr/local/bin/r10k deploy environment -p
+          sudo /usr/local/bin/r10k deploy environment -p --config /etc/puppetlabs/code/environments/git/main/Puppetfile
