@@ -25,3 +25,7 @@ jobs:
           #sudo /usr/bin/bash -c "cd /etc/puppetlabs/code/environments/git/main && sudo /usr/local/bin/r10k deploy environment -pv"
           cd /etc
           ls -l
+          echo "Operating System: ${{ runner.os }}"
+          echo "Runner Labels: ${{ runner.labels }}"
+          echo "Environment Variables:"
+          env
