@@ -9,7 +9,7 @@ on:
       - 'code/**'
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, ARM64]
 
     steps:
       - name: Checkout repository
@@ -22,7 +22,6 @@ jobs:
         #working-directory: /etc/puppetlabs/code/environments/git/main
         run: |
           #sudo /usr/local/bin/r10k deploy evironment -pv
-          #sudo /usr/bin/bash -c "cd /etc/puppetlabs/code/environments/git/main && sudo /usr/local/bin/r10k deploy environment -pv"
           cd /etc
           ls -l
           echo "Operating System: ${{ runner.os }}"
